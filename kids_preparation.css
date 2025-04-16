@@ -1,0 +1,144 @@
+/* Dodatkowe style specyficzne dla tej podstrony */
+.preparation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.preparation-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.preparation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.preparation-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.preparation-card p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.preparation-card ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.preparation-card li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.preparation-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/*.preparation-image {*/
+/*    margin: 40px 0;*/
+/*    border-radius: 5px;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+.preparation-image img {
+    width: 100%;
+    display: block;
+}
+
+.age-recommendations {
+    margin: 40px 0;
+}
+
+.age-recommendations h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.age-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.age-table th, .age-table td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.age-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+}
+
+.age-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.tips-list {
+    margin: 30px 0;
+}
+
+.tips-list li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.tips-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+
+
+@media (max-width: 768px) {
+    .preparation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.preparation-warning {
+    background-color: rgba(255, 235, 235, 0.05);
+    border-left: 4px solid var(--accent-color);
+    margin: 40px 0;
+    grid-column: span 2;
+}
+
+.preparation-warning h3 {
+    font-size: 22px;
+}
+
+.preparation-warning strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .preparation-warning {
+        grid-column: span 1;
+    }
+}
+
+.spacer {
+    height: 15px; /* możesz dostosować wysokość */
+}
